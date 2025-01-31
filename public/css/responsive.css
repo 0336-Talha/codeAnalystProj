@@ -1,0 +1,150 @@
+@media screen and (max-width: 1200px) {
+  /*====================form placeholder font==============*/
+
+  ::-webkit-input-placeholder {
+    font-size: 12px;
+  }
+
+  ::-moz-placeholder {
+    font-size: 12px;
+  }
+
+  :-ms-input-placeholder {
+    font-size: 12px;
+  }
+
+  :-moz-placeholder {
+    font-size: 12px;
+  }
+
+  #banner .col h1 {
+    font-size: 52px;
+  }
+
+  #about .col {
+    padding-right: 40px;
+  }
+
+  #counter .col .inner p {
+    font-size: 15px;
+    left: 83px;
+  }
+
+  #award .outer .colr {
+    padding-left: 0px;
+  }
+
+  section#counter {
+    padding: 40px;
+  }
+
+  #testimonial .owl-carousel.owl-theme .owl-nav {
+    top: -30%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  /*_____ Navigation _____*/
+  .toggle {
+    display: flex;
+  }
+  header {
+    height: auto;
+  }
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-flow: wrap;
+    float: none;
+    display: none;
+    height: auto;
+    background: rgb(255 255 255 / 90%);
+    padding: 20px 50px 15px;
+    margin: 0;
+    visibility: hidden;
+    opacity: 0;
+    backdrop-filter: saturate(180%) blur(20px);
+    overflow: auto;
+    z-index: 2;
+  }
+
+  nav.active {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+  }
+  #nav {
+    align-items: center;
+    flex-flow: wrap;
+  }
+  #nav > li {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 15px;
+  }
+  nav > ul > li > a {
+    font-size: 20px;
+  }
+  #nav > li > .sub {
+    position: static;
+    display: none;
+    width: 100%;
+    max-height: none;
+    background: transparent;
+    visibility: visible;
+    opacity: 1;
+    text-align: center;
+    margin: 0 auto !important;
+    border: 0;
+    border-radius: 0;
+    transition: none;
+    box-shadow: none;
+  }
+  #nav > li > .sub > li {
+    display: flex;
+    justify-content: center;
+  }
+  #nav > li > .sub > li > a {
+    background: transparent;
+    border-top: 0;
+    border-bottom: 0;
+  }
+  nav #cta {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  /* -------------------footer-------------------- */
+  footer .flexRow > .col {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /*_____ col-xx-? _____*/
+  .col-xx-12,
+  .col-xx-11,
+  .col-xx-10,
+  .col-xx-9,
+  .col-xx-8,
+  .col-xx-7,
+  .col-xx-6,
+  .col-xx-5,
+  .col-xx-4,
+  .col-xx-3,
+  .col-xx-2,
+  .col-xx-1 {
+    width: 100% !important;
+  }
+  h1 {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+}
