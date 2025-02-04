@@ -1,36 +1,18 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
 use App\Http\Controllers\admin\index;
 use App\Http\Controllers\admin\Pages;
 use App\Http\Controllers\admin\TestimonialController;
 use App\Http\Controllers\admin\TeamController;
-
 use App\Http\Controllers\admin\LanguagesController;
-
 use App\Http\Controllers\admin\PortfolioController;
 use App\Http\Controllers\admin\BrandController;
-
-
-
-
-
-
 use App\Http\Controllers\admin\ContactController;
-
 use App\Http\Controllers\admin\ServiceController;
 use App\Http\Controllers\ContentPages;
-
-
-
 use App\Http\Controllers\admin\Dashboard;
 
-
-// Route::get('/', function () {
-//     return view('welcome');
-//     // return message();
-// });
 
 route::get('/',[ContentPages::class,'home_page']);
 route::get('/about',[ContentPages::class,'about_page']);
@@ -70,7 +52,7 @@ Route::get('/admin/logout', [Index::class, 'logout']);
 
 //forget Admin Passwords.
 Route::get('admin/forgot-password', [Index::class, 'forgot_password'])->name('admin.forgot_password');
-Route::post('admin/forgot-password', [Index::class, 'send_reset_link'])->name('admin.send_reset_link');
+Route::post('admin/forgot-passwords', [Index::class, 'send_reset_link'])->name('admin.send_reset_link');
 Route::get('admin/reset-password/{token}', [Index::class, 'showResetPasswordForm'])->name('password.reset');
 Route::post('admin/submit-password', [Index::class, 'resetPassword'])->name('password.update');
 
@@ -98,15 +80,6 @@ Route::match(['GET', 'POST'], '/admin/sitecontent/contact', [Pages::class, 'cont
 Route::match(['GET', 'POST'], '/admin/sitecontent/services', [Pages::class, 'services']);
 
 Route::match(['GET', 'POST'], '/admin/sitecontent/portfolios', [Pages::class, 'portfolios']);
-
-
-
-
-
-
-
-
-
 
 
 //cruds. Testimonials.

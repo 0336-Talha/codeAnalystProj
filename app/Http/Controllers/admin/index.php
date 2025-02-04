@@ -11,6 +11,10 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
+use Illuminate\Support\Facades\Validator;
+
+use PHPMailer\PHPMailer\Exception;
+
 
 class index extends Controller
 {
@@ -61,6 +65,7 @@ class index extends Controller
 
     public function send_reset_link(Request $request)
     {
+        // return "okay";
         $request->validate([
             'email' => 'required|email|exists:admin,site_admin_email',
         ]);
@@ -78,15 +83,25 @@ class index extends Controller
         $resetLink = url('admin/reset-password/' . $token);
 
         // Prepare email data for the template
-        $email_data = [
-            'email_from' => 'no-reply@herosolutions.com.pk', // Sender's email
-            'email_from_name' => 'Amphenol Tecvox', // Sender's name
-            'email_to' => $request->email, // Recipient's email
-            'email_to_name' => 'Admin', // Recipient's name
-            'subject' => 'Password Reset Request', // Email subject
-            'link' => $resetLink, // Reset link for the email template
+        // $email_data = [
+        //     'email_from' => 'no-reply@herosolutions.com.pk', // Sender's email
+        //     'email_from_name' => 'Amphenol Tecvox', // Sender's name
+        //     'email_to' => $request->email, // Recipient's email
+        //     'email_to_name' => 'Admin', // Recipient's name
+        //     'subject' => 'Password Reset Request', // Email subject
+        //     'link' => $resetLink, // Reset link for the email template
 
+        // ];
+        $email_data = [
+            'email_from' =>  $this->data['site_settings']->site_noreply_email,
+            'email_from_name' => $this->data['site_settings']->site_name,
+            'email_to' => $request->email,
+            'email_to_name' => 'Admin',
+            'subject' => 'Password Reset Request',
+            'link' => $resetLink, // Reset link for the email template
+            
         ];
+        // return (send_email($email_data, 'forgot'));s
 
         // Send email using your custom send_email function
         if (send_email($email_data, 'forgot')) { // Ensure the template name matches your view file
@@ -192,6 +207,7 @@ class index extends Controller
         
 
     }
+    
 
 }
 
