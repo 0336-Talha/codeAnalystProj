@@ -11,7 +11,6 @@
             </a>
             <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
               <div class="message-body">
-                <h4>hello ry baba</h4>
                 <a href="{{ url('admin/logout') }}" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
               </div>
             </div>
