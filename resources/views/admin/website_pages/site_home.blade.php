@@ -504,14 +504,14 @@ id="saveForm">
             <?php $how_block_count = 0; ?>
             @for ($i = 8; $i <= 11; $i++)
                 <?php $how_block_count = $how_block_count + 1; ?>
-                <div class="col-4">
+                <div class="col-3">
                     <div class="card">
 
                         <div class="card-header">
                             <h5>Block {{ $how_block_count }}</h5>
                         </div>
                     
-                        <div class="card-body">
+                        <div class="">
                             <div class="row">
                                 <div class="col">
                                     <div class="card w-100 border position-relative overflow-hidden">
@@ -559,6 +559,7 @@ id="saveForm">
                         </div>
                     </div>
                 </div>
+        
             @endfor
         </div>
     </div>
@@ -601,12 +602,6 @@ id="saveForm">
                                             value="{{ !empty($sitecontent['sec6_dec']) ? $sitecontent['sec6_dec'] : "" }}">
                                     </div>
                                 </div>
-                                {{-- <div class="col-12">
-                                    <div class="mb-3">
-                                        <label class="form-label" for="section3_text">Text</label>
-                                        <textarea id="section3_text" name="section3_text" rows="4" class=" editor">{{ !empty($sitecontent['section3_text']) ? $sitecontent['section3_text'] : "" }}</textarea>
-                                    </div>
-                                </div> --}}
                             </div>
                         </div>
             

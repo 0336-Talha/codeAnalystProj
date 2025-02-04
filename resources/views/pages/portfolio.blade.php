@@ -23,7 +23,8 @@
                 <div class="col">
                     <div class="inner">
                         <div class="image">
-                            <img src="{{asset('/storage/portfolio/'.$port->image)}}" alt="">
+
+                            <img src="{{ get_site_image_src('portfolio', !empty($port['image']) ? $port['image'] : '') }}" alt="">
                             <a class="bttn popBtn"
                              data-popup="project"
                              data-id={{$port->id}}
@@ -72,7 +73,7 @@
                                 <div class="inner">
                                     <div class="content">
                                         <div class="ico"><img
-                                                src="{{asset('/storage/testinomial/'.$testi->image)}}"
+                                                src="{{ get_site_image_src('testinomial', !empty($testi['image']) ? $testi['image'] : '') }}"
                                                 alt="">
                                         </div>
                                         <p>

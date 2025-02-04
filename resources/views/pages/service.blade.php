@@ -22,10 +22,10 @@
                             {{-- {{ get_site_image_src('services', !empty($serv['image']) ? $serv['image'] : '') }} --}}
                         {{-- {{$serv->image}} --}}
                             {{-- <img src="{{asset($serv['image'])}}" alt=""> --}}
-                            <img src="{{ asset('/storage/service/'.$serv->image ) }}" alt="">
+                            <img src=" {{ get_site_image_src('service', !empty($serv['image']) ? $serv['image'] : '') }}" alt="">
                             <div class="content">
                                 <div class="left">
-                                    <h6>Generation of Wealth</h6>
+                                    <h6>{{$serv->category}}</h6>
                                     <h3>{{$serv->name}}</h3>
                                 </div>
                                 <div class="right">
@@ -73,9 +73,10 @@
                 <div class="col">
                     <div class="inner">
                         <div class="image">
-                            <img src="{{ asset('/storage/brand/'.$bar->image ) }}" alt="">
+                            <img src="  {{ get_site_image_src('brand', !empty($bar['image']) ? $bar['image'] : '') }}" alt="">
                         </div>
                     </div>
+                  
                 </div>
                 @endforeach
           
