@@ -24,7 +24,7 @@
                             <td>1</td>
                             <td width="65%">Home</td>
                             <td>
-                                <a href="{{ url('admin/pages/home') }}" class="btn btn-primary active">Edit
+                                <a href="{{ url('admin/sitecontent/home') }}" class="btn btn-primary active">Edit
                                     Page</a>
                             </td>
                         </tr>
@@ -32,7 +32,7 @@
                             <td>2</td>
                             <td width="65%">About</td>
                             <td>
-                                <a href="{{ url('admin/pages/about') }}" class="btn btn-primary active">Edit
+                                <a href="{{ url('admin/sitecontent/about') }}" class="btn btn-primary active">Edit
                                     Page</a>
                             </td>
                         </tr>
@@ -40,33 +40,26 @@
                             <td>3</td>
                             <td width="65%">Sevices</td>
                             <td>
-                                <a href="{{ url('admin/pages/services') }}" class="btn btn-primary active">Edit
+                                <a href="{{ url('admin/sitecontent/services') }}" class="btn btn-primary active">Edit
                                     Page</a>
                             </td>
                         </tr>
-
                         <tr>
                             <td>3</td>
                             <td width="65%">Portfolio</td>
                             <td>
-                                <a href="{{ url('admin/pages/portfolios') }}" class="btn btn-primary active">Edit
+                                <a href="{{ url('admin/sitecontent/portfolios') }}" class="btn btn-primary active">Edit
                                     Page</a>
                             </td>
                         </tr>
-
                         <tr>
                             <td>3</td>
                             <td width="65%">Contacts</td>
                             <td>
-                                <a href="{{ url('admin/pages/contact') }}" class="btn btn-primary active">Edit
+                                <a href="{{ url('admin/sitecontent/contact') }}" class="btn btn-primary active">Edit
                                     Page</a>
                             </td>
                         </tr>
-                    
-                   
-                    
-                    
-                        
                     </tbody>
                 </table>
             </div>

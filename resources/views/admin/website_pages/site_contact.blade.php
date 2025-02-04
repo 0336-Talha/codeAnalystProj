@@ -67,54 +67,60 @@ id="saveForm">
         </div>
     </div>
   
-<div class="card">
-
-    <div class="card-header">
-        <h5>Overview Section</h5>
-    </div>
-
-    <div class="card-body">
-
-        <div class="row">
-            <div class="col-md-12">
-                <div class="row">
-                    <div class="col-6">
-                        <div class="mb-3">
-                            <label class="form-label" for="overview_top_heading">Top Heading</label>
-                            <input class="form-control" id="overview_top_heading" type="text"
-                                name="overview_top_heading" placeholder=""
-                                value="{{ !empty($sitecontent['overview_top_heading']) ? $sitecontent['overview_top_heading'] : "" }}">
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="mb-3">
-                            <label class="form-label" for="overview_heading">Heading</label>
-                            <input class="form-control" id="overview_heading" type="text"
-                                name="overview_heading" placeholder=""
-                                value="{{ !empty($sitecontent['overview_heading']) ? $sitecontent['overview_heading'] : "" }}">
-                        </div>
-                    </div>
-                   
-                </div>
-            </div>
 
 
-            <div class="col">
-                <div class="card w-100 border position-relative overflow-hidden">
-                    <div class="card-body p-4">
-                        <div class="text-center">
-                            <div class="file_choose_icon">
-                                <img src="{{ get_site_image_src('images', !empty($sitecontent['image1']) ? $sitecontent['image1'] : "") }}" alt="matdash-img" class="img-fluid ">
-                            </div>
-                            <p class="mb-0">Allowed JPG, GIF or PNG. Max size of 800K</p>
-                            <input class="form-control uploadFile" name="image1" type="file"
-                                data-bs-original-title="" title="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+ 
         
+            <div class="card">
+
+                <div class="card-header">
+                    <h5>Overview Section</h5>
+                </div>
+            
+                <div class="card-body">
+            
+                    <div class="row">
+                        <div class="col">
+                            <div class="card w-100 border position-relative overflow-hidden">
+                                <div class="card-body p-4">
+                                  <div class="text-center">
+                                   <div class="file_choose_icon">
+                                    <img src="{{ get_site_image_src('images', !empty($sitecontent['image1']) ? $sitecontent['image1'] : '') }}" alt="matdash-img" class="img-fluid " >
+                                   </div>
+                                    <p class="mb-0">Allowed JPG, GIF or PNG. Max size of 800K</p>
+                                    <input class="form-control uploadFile" name="image1" type="file"
+                                        data-bs-original-title="" title="">
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+            
+                        <div class="col-md-8">
+                            <div class="row">
+                            <div class="col-12">
+                                    <div class="mb-3">
+                                        <label class="form-label" for="overview_top_heading">Top Heading</label>
+                                        <input class="form-control" id="overview_top_heading" type="text"
+                                            name="overview_top_heading" placeholder=""
+                                            value="{{ !empty($sitecontent['overview_top_heading']) ? $sitecontent['overview_top_heading'] : "" }}">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label class="form-label" for="overview_heading">Heading</label>
+                                        <input class="form-control" id="overview_heading" type="text"
+                                            name="overview_heading" placeholder=""
+                                            value="{{ !empty($sitecontent['overview_heading']) ? $sitecontent['overview_heading'] : "" }}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
+            
+            
+            </div>
           
          
 

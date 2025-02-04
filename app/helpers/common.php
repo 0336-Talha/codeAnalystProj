@@ -16,6 +16,16 @@ function message(){
     return Admin::where('id', '=', 1)->first();
 }
 
+function makeZerOne($key){
+    $ky=$key+1;
+    if($ky < 10){
+        return "0".$ky;
+    }else{
+        return $ky;
+    }
+    // $key+1 < 10 ? "0".$key+1 : $key+1
+}
+
 function get_site_image_src($path, $image, $type = '', $user_image = false)
 {
 

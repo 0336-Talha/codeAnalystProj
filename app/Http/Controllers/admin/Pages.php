@@ -53,7 +53,7 @@ class Pages extends Controller
             $page->ckey=$request->segment(3);
             $page->code=$data;
             $page->save();
-            return redirect('admin/pages/'.$request->segment(3))
+            return redirect('admin/sitecontent/'.$request->segment(3))
                 ->with('success','Content Updated Successfully');
         }
         // $this->data['row']=Sitecontent::where('ckey',$request->segment(3))->first();
@@ -108,7 +108,7 @@ class Pages extends Controller
             $page->ckey=$request->segment(3);
             $page->code=$data;
             $page->save();
-            return redirect('admin/pages/'.$request->segment(3))
+            return redirect('admin/sitecontent/'.$request->segment(3))
                 ->with('success','Content Updated Successfully');
         }
         $this->data['row']=Sitecontent::where('ckey',$request->segment(3))->first();;
@@ -159,7 +159,7 @@ class Pages extends Controller
             $page->ckey=$request->segment(3);
             $page->code=$data;
             $page->save();
-            return redirect('admin/pages/'.$request->segment(3))
+            return redirect('admin/sitecontent/'.$request->segment(3))
                 ->with('success','Content Updated Successfully');
         }
         $this->data['row']=Sitecontent::where('ckey',$request->segment(3))->first();;
@@ -210,7 +210,7 @@ class Pages extends Controller
             $page->ckey=$request->segment(3);
             $page->code=$data;
             $page->save();
-            return redirect('admin/pages/'.$request->segment(3))
+            return redirect('admin/sitecontent/'.$request->segment(3))
                 ->with('success','Content Updated Successfully');
         }
         $this->data['row']=Sitecontent::where('ckey',$request->segment(3))->first();;
@@ -258,7 +258,7 @@ class Pages extends Controller
             $page->ckey=$request->segment(3);
             $page->code=$data;
             $page->save();
-            return redirect('admin/pages/'.$request->segment(3))
+            return redirect('admin/sitecontent/'.$request->segment(3))
                 ->with('success','Content Updated Successfully');
         }
         $this->data['row']=Sitecontent::where('ckey',$request->segment(3))->first();;

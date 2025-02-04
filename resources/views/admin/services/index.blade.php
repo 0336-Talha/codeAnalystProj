@@ -8,7 +8,7 @@
 @endsection
 @section('page_content')
 @if (request()->segment(3) == 'edit' || request()->segment(3) == 'add')
-{!!breadcrumb('Add/Update Programming Languages')!!}
+{!!breadcrumb('Add/Update Services')!!}
 @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -50,57 +50,14 @@
                                 <input type="text" class="form-control" name="name" value="{{!empty($row->name) ? $row->name : ""}}">
                             </div>
 
-                           
-
-
-                            {{-- <div class="mb-3">
-                                <div class="form-check form-switch py-2">
-                                    <input class="form-check-input success" type="checkbox" id="color-success" {{ !empty($row) ? ($row->status == 1 ? 'checked' : '') : '' }} name="status" />
-                                    <label class="form-check-label" for="color-success"> {{ !empty($row) ? ($row->status == 0 ? 'InActive' : 'Active') : 'Status' }}</label>
-                                </div>
-                            </div> --}}
-
-
+                            <div class="mb-3">
+                                <label for="title" class="form-label">Category</label>
+                                <input type="text" class="form-control" name="category" value="{{!empty($row->category) ? $row->category : ""}}">
+                            </div>
                         </div>
                     </div>
                 </div>
-                {{-- <div class="col-lg-12 d-flex align-items-stretch">
-                    <div class="card w-100 border position-relative overflow-hidden">
-                        {{-- <div class="card-body p-4">
-                            <h4 class="card-title">Details Block</h4>
-                            <div class="mb-3">
-                                <label for="detail" class="form-label">Text</label>
-                                <textarea class="editor" name="detail">{{ !empty($row) ? $row->discription : '' }}</textarea>
-                            </div> --}}
-                            {{-- <div class="card-body p-4">
-                                <h4 class="card-title">All Links</h4>
-                                <div class="mb-3">
-                                    <label for="title" class="form-label">Facebook</label>
-                                    <input type="text" class="form-control" name="fb" value="{{!empty($row->facebook) ? $row->facebook : ""}}">
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="title" class="form-label">LinkedIn</label>
-                                    <input type="text" class="form-control" name="link" value="{{!empty($row->linkedin) ? $row->linkedin : ""}}">
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="title" class="form-label">Twitter</label>
-                                    <input type="text" class="form-control" name="twit" value="{{!empty($row->twitter) ? $row->twitter : ""}}">
-                                </div>
-
-
-                                <div class="mb-3">
-                                    <label for="title" class="form-label">Skype</label>
-                                    <input type="text" class="form-control" name="skype" value="{{!empty($row->skype) ? $row->skype : ""}}">
-                                </div> --}}
-
-
-                                
-                                
-                            
-
-                        
+          
                         </div>
                     </div>
                 </div>
@@ -127,11 +84,6 @@
 <div class="card"> 
     <div class="card-body">
         <div class="row"> 
-            @if (count($rows) > 0)
-            <div class="btn_blk text-right mb-4 d-flex justify-content-end">
-                <a href="javascript:document.getElementById('updateFormOrder').submit();" class="btn btn-danger"><i class="fa fa-refresh" aria-hidden="true"></i> Update Order</a>
-            </div>
-            @endif
             <div class="table-responsive">
                 {{-- <form name="updateFormOrder" id="updateFormOrder" action="{{url('admin/services/orderAll/')}}" method="post">
                     @csrf --}}
@@ -142,7 +94,7 @@
                                 <th>Sr#</th>
                                 <th>Image</th>
                                 <th>Name</th>
-                                {{-- <th>Status</th> --}}
+                                <th>Category</th>
                               
                                 <th>Action</th>
                             </tr>
@@ -161,6 +113,8 @@
 
                                 </td>
                                 <td>{!! $row->name !!}</td>
+                                <td>{{ $row->category }}</td>
+
                                 {{-- <td>{{!empty($row->linkdin) ? $row->linkdin : ""}}</td> --}}
                              {{-- <td>{!! $row->discription !!}</td>  --}}
                              {{-- <td>{{}}</td> --}}

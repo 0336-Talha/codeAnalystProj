@@ -94,7 +94,17 @@
                        
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+         <div class="card">
 
+                    <div class="card-header">
+                        <h5>Banner Section</h5>
+                    </div>
+            
+                    <div class="card-body">
+            <div class="row">
 
                 <div class="col">
                     <div class="card w-100 border position-relative overflow-hidden">
@@ -131,19 +141,18 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                
               
+
                 <div class="row">
                     <div class="col">
                         <div class="mb-3">
                             <label class="form-label" for="banner_btntext">Button Text</label>
-                        <input class="form-control" id="banner_btntext" type="text"
-                            name="banner_btntext" placeholder=""
-                            value="{{ !empty($sitecontent['banner_btntext']) ? $sitecontent['banner_btntext'] : "" }}">
-
+                            <input class="form-control" id="banner_btntext" type="text"
+                                name="banner_btntext" placeholder=""
+                                value="{{ !empty($sitecontent['banner_btntext']) ? $sitecontent['banner_btntext'] : "" }}">
                         </div>
                     </div>
-               
                     <div class="col">
                         <div class="mb-3">
                             <label class="form-label" for="banner_btnUrl">Link URL</label>
@@ -157,12 +166,25 @@
                         </div>
                     </div>
                 </div>
+                </div>
 
+            </div>
+                    </div>
+         </div>
+        {{-- </div> --}}
 
                 {{-- yahn agy --}}
-                <div class="row">
-                    <hr>
-                    <h5>Banner down Section</h5>
+                <div class="card">
+
+                    <div class="card-header">
+                        <h5>Banner Down Section</h5>
+                    </div>
+            
+                    <div class="card-body">
+            <div class="row">
+
+               
+                    {{-- <h5>Banner down Section</h5> --}}
 
                     <div class="col">
                         <div class="card w-100 border position-relative overflow-hidden">
@@ -199,7 +221,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                  
+
+        
 
                     <div class="row">
                         <div class="col">
@@ -236,7 +260,7 @@
 
         
 
-    </div>
+
     <div class="card">
 
         <div class="card-header">
@@ -324,7 +348,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                
               
                 <div class="row">
                     <div class="col">
@@ -355,6 +379,7 @@
         </div>
 
 
+    </div>
     </div>
  
     <div class="card">
@@ -420,7 +445,7 @@
                     </div>
 
 
-                </div>
+                
               
                 <div class="row">
                     <div class="col">
@@ -451,47 +476,59 @@
         </div>
 
 
+    </div> 
     </div>
-    <div class="card">
-        <div class="card-header">
-            <h5>Section 4(testimonials)</h5>
-        </div>
-        <div class="card-body">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="mb-3">
-                        <label class="form-label" for="section4_head">Top Heading</label>
-                        <input class="form-control" id="section4_head" type="text"
-                            name="section4_head" placeholder=""
-                            value="{{ !empty($sitecontent['section4_head']) ? $sitecontent['section4_head'] : "" }}">
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="mb-3">
-                        <label class="form-label" for="section4_dec">Heading</label>
-                        <input class="form-control" id="section4_dec" type="text"
-                            name="section4_dec" placeholder=""
-                            value="{{ !empty($sitecontent['section4_dec']) ? $sitecontent['section4_dec'] : "" }}">
-                    </div>
-                </div>
+  
 
+    <div class="card">
+
+        <div class="card-header">
+            <h5>Section 4(Testimonial)</h5>
+        </div>
+    
+        <div class="card-body">
+    
+            <div class="row">
                 <div class="col">
                     <div class="card w-100 border position-relative overflow-hidden">
                         <div class="card-body p-4">
-                            <div class="text-center">
-                                <div class="file_choose_icon">
-                                    <img src="{{ get_site_image_src('images', !empty($sitecontent['image5']) ? $sitecontent['image5'] : "") }}" alt="matdash-img" class="img-fluid ">
-                                </div>
-                                <p class="mb-0">Allowed JPG, GIF or PNG. Max size of 800K</p>
-                                <input class="form-control uploadFile" name="image5" type="file"
-                                    data-bs-original-title="" title="">
+                          <div class="text-center">
+                           <div class="file_choose_icon">
+                            <img src="{{ get_site_image_src('images', !empty($sitecontent['image5']) ? $sitecontent['image5'] : '') }}" alt="matdash-img" class="img-fluid " >
+                           </div>
+                            <p class="mb-0">Allowed JPG, GIF or PNG. Max size of 800K</p>
+                            <input class="form-control uploadFile" name="image6" type="file"
+                                data-bs-original-title="" title="">
+                          </div>
+                        </div>
+                      </div>
+                </div>
+    
+                <div class="col-md-8">
+                    <div class="row">
+                    <div class="col-12">
+                            <div class="mb-3">
+                                <label class="form-label" for="section4_head">Top Heading</label>
+                                <input class="form-control" id="section4_head" type="text"
+                                    name="section4_head" placeholder=""
+                                    value="{{ !empty($sitecontent['section4_head']) ? $sitecontent['section4_head'] : "" }}">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mb-3">
+                                <label class="form-label" for="section4_dec">Heading</label>
+                                <input class="form-control" id="section4_dec" type="text"
+                                    name="section4_dec" placeholder=""
+                                    value="{{ !empty($sitecontent['section4_dec']) ? $sitecontent['section4_dec'] : "" }}">
                             </div>
                         </div>
                     </div>
                 </div>
-             
+    
             </div>
         </div>
+    
+    
     </div>
   
     <div class="col-12">

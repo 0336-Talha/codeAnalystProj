@@ -14,7 +14,7 @@ class ServiceController extends Controller
     public function index()
     {
    
-        $this->data['rows'] = Service::get();
+        $this->data['rows'] = Service::latest()->get();
         // return $this->data;
         // return "hello";
         return view('admin.services.index', $this->data);
@@ -29,6 +29,7 @@ class ServiceController extends Controller
             $request->validate([
                 'name' => 'required',
                 'image'=>'required',
+                'category'=>'required'
             ]);
             // dd($input);
             // return $input;
@@ -52,7 +53,7 @@ class ServiceController extends Controller
 
             $data['name'] = $input['name'];
           
-
+            $data['category']=$input['category'];
 
             $id = Service::create($data);
 
@@ -121,10 +122,10 @@ class ServiceController extends Controller
     public function delete($id)
     {
         // $products = Products_model::find($id);
-        $test = Language::find($id);
-        removeImage("lang/" . $test->image);
+        $test = Service::find($id);
+        removeImage("service/" . $test->image);
         $test->delete();
-        return redirect('admin/langs/')
+        return redirect('admin/services/')
             ->with('error', 'Content deleted Successfully');
     }
 

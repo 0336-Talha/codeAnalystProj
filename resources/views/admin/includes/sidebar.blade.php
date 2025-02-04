@@ -43,12 +43,6 @@
             <span class="hide-menu">Contact Messages</span>
           </a>
         </li>
-        <li class="sidebar-item">
-          <a class="sidebar-link {{ $admin_page == 'subscribers' ? 'active' : '' }}" href="{{ url('admin/subscribers') }}" aria-expanded="false">
-            <iconify-icon icon="jam:newsletter"></iconify-icon>
-            <span class="hide-menu">Subscribers</span>
-          </a>
-        </li>
 
 
         <li class="nav-small-cap">
@@ -62,40 +56,12 @@
           </a>
         </li>
 
-        <li class="sidebar-item">
-          <a class="sidebar-link {{ $admin_page == 'products' ? 'active' : '' }}" href="{{ url('admin/products') }}">
-            <iconify-icon icon="mdi:shopping-outline"></iconify-icon>
-            Products & Capabilities
-
-          </a>
-        </li>
 
 
 
 
 
-        <li class="sidebar-item">
-          <a class="sidebar-link has-arrow {{ $admin_page == 'markers' || $admin_page == 'center_categories' ? 'active' : '' }}" href="javascript:void(0)" aria-expanded="false">
-            <iconify-icon icon="mdi:location"></iconify-icon>
-            <span class="hide-menu"> Global Locations</span>
-          </a>
-          <ul aria-expanded="false" class="collapse first-level {{ $admin_page == 'markers' || $admin_page == 'center_categories' ? 'in' : '' }}">
-            <li class="sidebar-item">
-              <a class="sidebar-link {{ $admin_page == 'markers' ? 'active' : '' }}" href="{{ url('admin/markers') }}">
-                <iconify-icon icon="mdi:location"></iconify-icon>
-                Locations
 
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link {{ $admin_page == 'center_categories' ? 'active' : '' }}" href="{{ url('admin/center_categories') }}">
-                <iconify-icon icon="mdi:office-building"></iconify-icon>
-
-                Center Categories
-              </a>
-            </li>
-          </ul>
-        </li>
 
  
 
@@ -129,7 +95,12 @@
                 <span class="icon-small"></span>Services
               </a>
             </li>
-
+            
+            <li class="sidebar-item">
+              <a class="sidebar-link {{ $admin_page == 'brands' ? 'active' : '' }}" href="{{ url('/admin/brands') }}">
+                <span class="icon-small"></span>Brands
+              </a>
+            </li>
 
             
             <li class="sidebar-item">

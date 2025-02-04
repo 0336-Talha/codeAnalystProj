@@ -101,11 +101,7 @@
 <div class="card"> 
     <div class="card-body">
         <div class="row"> 
-            @if (count($rows) > 0)
-            <div class="btn_blk text-right mb-4 d-flex justify-content-end">
-                <a href="javascript:document.getElementById('updateFormOrder').submit();" class="btn btn-danger"><i class="fa fa-refresh" aria-hidden="true"></i> Update Order</a>
-            </div>
-            @endif
+    
             <div class="table-responsive">
                 <form name="updateFormOrder" id="updateFormOrder" action="{{url('admin/testinomials/orderAll/')}}" method="post">
                     @csrf

@@ -1,78 +1,3 @@
-{{-- <footer>
-    <div class="contain">
-        <div class="flex">
-            <!-- Contact Info Section -->
-            <div class="col">
-                <h5>Contact Info</h5>
-                <ul class="lst">
-                    <li><a href="mailto:{{ $site_settings->site_email }}">{{ $site_settings->site_email }}</a></li>
-                    <li><a href="tel:{{ $site_settings->site_phone }}">{{ $site_settings->site_phone }}</a></li>
-                </ul>
-                <div class="br"></div>
-                <h5>Follow us on</h5>
-                <ul class="social_lnks">
-                    <li>
-                        <a href="{{ $site_settings->site_facebook }}" target="_blank"><img src="{{ asset('assets/images/facebook.svg') }}" alt="Facebook"></a>
-                    </li>
-                    <li><a href="{{ $site_settings->site_instagram }}" target="_blank"><img src="{{ asset('assets/images/instagram.svg') }}" alt="Instagram"></a></li>
-                    <li><a href="{{ $site_settings->site_twitter }}" target="_blank"><img src="{{ asset('assets/images/twitter.svg') }}" alt="Twitter"></a></li>
-                    <li><a href="{!! $site_settings->site_discord !!}" target="_blank"><img src="{{ asset('assets/images/linkedin.svg') }}" alt="LinkedIn"></a></li>
-                </ul>
-            </div>
-
-            <!-- Short Links Section -->
-            <div class="col">
-                <h5>Short Links</h5>
-                <ul class="lst">
-                    <li><a href="{{ url('/') }}">Home</a></li>
-                    <li><a href="{{ url('products') }}">Products & Capabilities</a></li>
-                    <li><a href="{{ url('careers') }}">Jobs</a></li>
-                    <li><a href="{{ url('team') }}">Team Tecvox</a></li>
-                    <li><a href="{{ url('blog') }}">Blog</a></li>
-                </ul>
-            </div>
-
-            <!-- Company Section -->
-            <div class="col">
-                <h5>Company</h5>
-                <ul class="lst">
-                    <li><a href="{{ url('about') }}">Company Overview</a></li>
-                    <li><a href="{{ url('about#vision') }}">Vision</a></li>
-                    <li><a href="{{ url('about#locations') }}">Global Locations</a></li>
-                    <li><a href="{{ url('about#manufacturing') }}">Manufacturing</a></li>
-                    <li><a href="{{ url('contact') }}">Contact</a></li>
-                </ul>
-            </div>
-
-            <!-- Newsletter Section -->
-            <div class="col">
-                <h5>Join our mailing list</h5>
-                <form action="{{ url('newsletter') }}" method="post" autocomplete="off" class="frmAjax" id="frmNewsletter" novalidate="novalidate">
-                    @csrf
-                    <label for="email">Stay up to date with the latest news and deals!</label>
-                    <div class="txtGrp relative">
-                        <input type="email" name="email" id="email" class="input" placeholder="@ your email address">
-                        <button type="submit" class="site_btn">Submit<i class="fi-arrow-right fi-2x"></i> </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer Bottom Section -->
-    <div class="copy_right">
-        <div class="contain">
-            <div class="_inner">
-                <p>Copyright©{{ date('Y') }} <a href="/">{{ $site_settings->site_name }}</a>, {{ $site_settings->site_copyright }}</p>
-                <ul class="lst">
-                    <li><a href="{{ url('privacy-policy') }}">Privacy Policy</a></li>
-                    <li><a href="{{ url('terms-conditions') }}">Terms & Conditions</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</footer> --}}
-
 <footer>
     <div class="contain">
         <div class="outer">
@@ -84,7 +9,7 @@
                     <img src="{{asset('images/code.webp ')}}" alt="">
                     <h2>Ready To Work With Us?</h2>
                 </div>
-                <a class="webBtn">Explore More</a>
+                <a class="webBtn" href="/about">Explore More</a>
             </div>
             <div class="flex">
                 <div class="col">
@@ -94,8 +19,6 @@
                             <li><a href="/about">About</a></li>
                             <li><a href="/portfolios">Portfolio</a></li>
                             <li><a href="/services">Services</a></li>
-                            {{-- <li><a href="">Projects</a></li> --}}
-                            {{-- <li><a href="">Blog</a></li> --}}
                             <li><a href="/contact">Contact Us</a></li>
                         </ul>
                     </div>
@@ -104,7 +27,7 @@
                     <div class="inner">
                         <div class="link">
                             <h2>Let’s Build!</h2>
-                            <p><a href="">{{  $site_settings->site_email }}</a></p>
+                            <p><a href="mailto:{{  $site_settings->site_email }}">{{  $site_settings->site_email }}</a></p>
                         </div>
                         <div class="link">
                             <h2>Join The Force!</h2>
@@ -174,27 +97,32 @@
 
         <h1 class="text-center mb-4">PortFolio</h1>
         <div class="crosBtn"></div>
-        
-        <div class="product_detail">
-            <!-- Image Section -->
-            <div class="image mb-3">
-                <img id="popupImage" src="{{asset('images/code.webp')}}" class="img-fluid rounded" style="max-height: 300px; width: auto;" alt="Product Image">
-            </div>
 
+        <div class="product_detail">
+
+            <div class="image">
+                <img id="popupImage" style="height: 400px; border-radius: 40px;" src="{{asset('images/code.webp')}}" alt="">
+            </div>
+           
+           
             <!-- Title Section -->
             <h3 id="pro_title" class="fw-bold mb-3" style="margin-top:20px">Title</h3>
 
             <!-- Description Section -->
             <p id="pro_description" class="text-muted mb-4">Here will be the product description, providing more insight into the features and benefits.</p>
             
-            <div class="btn_blk">
-                <a href="{{ url('contact') }}" class="btn btn-primary">Click for Contact-US</a>
+            <div class="btn_blk" style="display: flex; justify-content: center; align-items: center;">
+                <a href="{{ url('contact') }}" class="webBtn">Click for Contact-US</a>
             </div>
+        </div>
+
         </div>
     </div>
 </section>
 
 <div id="snackbar">We have Recived your Email Thank you..</div>
+<div id="snackbaring">Error</div>
+
 
 {{-- <section class="popup" data-popup="project">
     <div class="table_dv">
@@ -259,11 +187,67 @@ function myFunction(msg) {
   x.className = "show";
   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3500);
 }
+function myFunctioning(msg) {
+  var x = document.getElementById("snackbaring");
+  x.innerHTML = msg;
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3500);
+}
+
 
     $(document).ready(function () {
        
         $("#contactform").submit(function (e) {
-        e.preventDefault(); // Prevent form from submitting normally
+                    // Reset all error messages
+         e.preventDefault(); // Prevent form from submitting normally
+
+        $('.error').remove();
+        
+        var isValid = true;
+        
+        // Validate name (required)
+        if ($('#name').val() === '') {
+            isValid = false;
+            $('#name').after('<span class="error">First name is required</span>');
+        }
+
+        // Validate last name (required)
+        if ($('#lname').val() === '') {
+            isValid = false;
+            $('#lname').after('<span class="error">Last name is required</span>');
+        }
+
+        // Validate email (required & format)
+        var email = $('#email').val();
+        var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        if (email === '') {
+            isValid = false;
+            $('#email').after('<span class="error">Email is required</span>');
+        } else if (!emailPattern.test(email)) {
+            isValid = false;
+            $('#email').after('<span class="error">Please enter a valid email address</span>');
+        }
+
+        // Validate phone (required)
+        if ($('#phone').val() === '') {
+            isValid = false;
+            $('#phone').after('<span class="error">Phone number is required</span>');
+        }
+
+        // Validate message (required)
+        if ($('#msg').val() === '') {
+            isValid = false;
+            $('#msg').after('<span class="error">Message is required</span>');
+        }
+
+        if ($('#webemail').val() === '') {
+            isValid = false;
+            $('#webemail').after('<span class="error">Message is required</span>');
+        }
+
+        if (isValid) {
+
+        $('.spinner').removeClass('hidden');
          
         let submitBtn = $("#submitBtn"); // Submit button ka reference
         submitBtn.prop("disabled", true); // Disable button on submit
@@ -281,6 +265,8 @@ function myFunction(msg) {
             // },
             success: function (response) {
                 console.log(response);
+        $('.spinner').addClass('hidden');
+
                    // Check if response.status exists 
     //                console.log("Response Type:", typeof response.status);
     // console.log("Response Value:", response.status);
@@ -289,8 +275,12 @@ function myFunction(msg) {
         $("#contactform")[0].reset();
         submitBtn.prop("disabled", false);
             } else {
-        myFunction("Something went wrong, please try again.");
+        $('.spinner').addClass('hidden');
+
+      
         submitBtn.prop("disabled", false);
+        myFunctioning("Something went wrong, please try again.")
+        
 
     }
                 // console.log(response);
@@ -298,10 +288,49 @@ function myFunction(msg) {
             },
             error: function (xhr) {
                 console.log(xhr.responseText);
-                alert("Something went wrong!");
+                // alert("Something went wrong!");
+                myFunctioning("Something went wrong!")
             }
         });
+    }
     });
+
+
+        // On change, remove error message
+        $('#name, #lname, #email, #phone, #msg , #webemail').on('change', function() {
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/; // Email regex pa
+
+        if ($(this).val() !== '') {
+            $(this).next('.error').remove(); // Remove the error message when input is changed
+
+            if ($(this).attr('id') === 'email') {
+            var emailValue = $(this).val();
+            if (!emailPattern.test(emailValue)) {
+                // Add error message if email format is invalid
+                $(this).after('<span class="error">Please enter a valid email address</span>');
+                $(this).addClass('error-border'); // Add yellow border if invalid
+            } else {
+                $(this).removeClass('error-border'); // Remove yellow border if valid
+            }
+        }
+
+        
+        }
+
+      
+    });
+
+    // var email = $('#email').val();
+    //     var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    //     if (email === '') {
+    //         isValid = false;
+    //         $('#email').after('<span class="error">Email is required</span>');
+    //     } else if (!emailPattern.test(email)) {
+    //         isValid = false;
+    //         $('#email').after('<span class="error">Please enter a valid email address</span>');
+    //     }
+
+
 
     });
 </script>

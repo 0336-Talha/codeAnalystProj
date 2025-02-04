@@ -4,8 +4,8 @@
   
     <section id="banner">
         <div class="social_contacts">
-            <a href=""><i class="fas fa-envelope"></i>{{$site_settings->site_email == Null ? "NoEmail" : $site_settings->site_email }}</a>
-            <a href=""><i class="fas fa-phone"></i>{{$site_settings->site_phone == Null ? "NoPhone" : $site_settings->site_phone }}</a>    
+            <a href="mailto:{{$site_settings->site_email}}"><i class="fas fa-envelope"></i>{{$site_settings->site_email == Null ? "NoEmail" : $site_settings->site_email }}</a>
+            <a href="tel:{{$site_settings->site_phone}}"><i class="fas fa-phone"></i>{{$site_settings->site_phone == Null ? "NoPhone" : $site_settings->site_phone }}</a>    
         </div>
         <div class="contain">
             <div class="content_center">
@@ -23,20 +23,14 @@
     <section id="slider">
         <div class=""> 
             <div class="owl-carousel banner-carousel">
-                @foreach($services as $serv)
-                    {{-- <h4>{{$serv->name}}</h4> --}}
-             
+                @foreach($services as $serv)     
                 <div class="item">
                     <div class="inner">
-                        <div class="image">
-                            {{-- images/b2.webp --}}
-                            {{-- {{ get_site_image_src('services', !empty($serv['image']) ? $serv['image'] : '') }} --}}
-                        {{-- {{$serv->image}} --}}
-                            {{-- <img src="{{asset($serv['image'])}}" alt=""> --}}
-                            <img src="{{ asset('/storage/service/'.$serv->image ) }}" alt="">
+                        <div class="image"> 
+                            <img src="{{ get_site_image_src('service', !empty($serv['image']) ? $serv['image'] : '') }}" alt="">
                             <div class="content">
                                 <div class="left">
-                                    <h6>Generation of Wealth</h6>
+                                    <h6>{{$serv->category}}</h6>
                                     <h3>{{$serv->name}}</h3>
                                 </div>
                                 <div class="right">
@@ -51,24 +45,7 @@
                 @endforeach
                
           
-                {{-- <div class="item">
-                    <div class="inner">
-                        <div class="image">
-                            <img src="images/b3.webp" alt="">
-                            <div class="content">
-                                <div class="left">
-                                    <h6>Generation of Wealth</h6>
-                                    <h3>Social Marketing</h3>
-                                </div>
-                                <div class="right">
-                                    <a href="" class="arrow-btn webBtn">
-                                        <i class="fa-solid fa-arrow-right-long"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
+          
             </div>
         </div>
     </section>
@@ -85,10 +62,7 @@
                     <div class="col">
                         <div class="inner">
                             <div class="icon">
-                                {{-- <img src="images/ch1.png" alt=""> --}}
-                               
                                 <img src=" {{ get_site_image_src('images', !empty($sitecontent['image' . $i]) ? $sitecontent['image' . $i] : '') }}" alt="">
-
                             </div>
                             <h3>{{$sitecontent['sec1_heading' . $i]}}</h3>
                             <p>{{$sitecontent['sec1_text' . $i]}} </p>
@@ -117,7 +91,7 @@
                 </div>
                 <div class="colr">
                     <div class="image">
-                        <img src="{{ get_site_image_src('images', !empty($sitecontent['image' .'6']) ? $sitecontent['image' .'6'] : '') }}" alt="">
+                        <img src="{{ get_site_image_src('images', !empty($sitecontent['image6']) ? $sitecontent['image6'] : '') }}" alt="">
                         <a data-popup="video" class="video-btn popBtn">
                             <i class="fa-solid fa-play"></i>
                         </a>
@@ -138,8 +112,7 @@
                 <div class="col">
                     <div class="inner">
                         <div class="icon">
-                            
-                            <img src="{{asset('/storage/lang/'.$langu->image)}}" alt="">
+                            <img src=" {{ get_site_image_src('lang', !empty($langu['image']) ? $langu['image'] : '') }}" alt="">
                         </div>
                         <p>{{$langu->name}}</p>
                     </div>
@@ -167,7 +140,7 @@
             <div class="flex">
                 <div class="col">
                     <div class="image">
-                        <img src="{{ get_site_image_src('images', !empty($sitecontent['image' .'7']) ? $sitecontent['image' .'7'] : '') }}" alt="">
+                        <img src="{{ get_site_image_src('images', !empty($sitecontent['image7']) ? $sitecontent['image7'] : '') }}" alt="">
                     </div>
                 </div>
                 <div class="colr">
@@ -223,7 +196,7 @@
                 <div class="col">
                     <div class="inner">
                         <div class="image">
-                            <img src="{{asset('/storage/portfolio/'.$port->image)}}" alt="">
+                            <img src="{{ get_site_image_src('portfolio', !empty($port['image']) ? $port['image'] : '') }}" alt="">
                             <a class="bttn popBtn"
                              data-popup="project"
                              data-id={{$port->id}}
@@ -231,7 +204,7 @@
                              ><i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                         <div class="content">
-                            <span class="number">{{$key+1 < 10 ? "0".$key+1 : $key+1 }}</span>
+                            <span class="number">{{ makeZerOne($key) }}</span>
                             <h3><a href="" class="cs-btn">{{$port->heading}}</a></h3>
                         </div>
                     </div>
@@ -260,7 +233,7 @@
                                 <div class="inner">
                                     <div class="content">
                                         <div class="ico"><img
-                                                src="{{asset('/storage/testinomial/'.$testi->image)}}"
+                                                src="{{ get_site_image_src('testinomial', !empty($testi['image']) ? $testi['image'] : '') }}"
                                                 alt="">
                                         </div>
                                         <p>
@@ -282,7 +255,7 @@
                 </div>
                 <div class="col">
                     <div class="image">
-                        <img src="{{get_site_image_src('images', !empty($sitecontent['image' .'12']) ? $sitecontent['image' .'12'] : '')}}"
+                        <img src="{{get_site_image_src('images', !empty($sitecontent['image12']) ? $sitecontent['image12'] : '')}}"
                             alt="">
                     </div>
                 </div>

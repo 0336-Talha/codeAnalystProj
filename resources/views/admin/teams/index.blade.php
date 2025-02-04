@@ -42,7 +42,7 @@
                 <div class="col-lg-6 d-flex align-items-stretch">
                     <div class="card w-100 border position-relative overflow-hidden">
                         <div class="card-body p-4">
-                            <h4 class="card-title">User Testimonial</h4>
+                            <h4 class="card-title">Team</h4>
                             <div class="mb-3">
                                 <label for="title" class="form-label">Name</label>
                                 <input type="text" class="form-control" name="name" value="{{!empty($row->name) ? $row->name : ""}}">
@@ -121,18 +121,14 @@
 </form>
 
 @else
-{!!breadcrumb('Users Testinomials',url('admin/teams/add/'))!!}
+{!!breadcrumb('Working Teams',url('admin/teams/add/'))!!}
 <div class="card"> 
     <div class="card-body">
         <div class="row"> 
-            @if (count($rows) > 0)
-            <div class="btn_blk text-right mb-4 d-flex justify-content-end">
-                <a href="javascript:document.getElementById('updateFormOrder').submit();" class="btn btn-danger"><i class="fa fa-refresh" aria-hidden="true"></i> Update Order</a>
-            </div>
-            @endif
+      
             <div class="table-responsive">
-                <form name="updateFormOrder" id="updateFormOrder" action="{{url('admin/testinomials/orderAll/')}}" method="post">
-                    @csrf
+            
+                
                     <table id="zero_config" class="table table-striped table-bordered text-nowrap align-middle">
                         <thead>
                             <!-- start row -->
@@ -192,7 +188,7 @@
                             @endif
                        </tbody>
                     </table>
-                </form>
+             
             </div>
         </div>
     </div>

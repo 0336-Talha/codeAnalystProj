@@ -92,12 +92,12 @@ Route::get('/admin/sitecontent', [Pages::class, 'index']);
 
 //CMS
 
-Route::match(['GET', 'POST'], '/admin/pages/home', [Pages::class, 'home']);
-Route::match(['GET', 'POST'], '/admin/pages/about', [Pages::class, 'about']);
-Route::match(['GET', 'POST'], '/admin/pages/contact', [Pages::class, 'contact']);
-Route::match(['GET', 'POST'], '/admin/pages/services', [Pages::class, 'services']);
+Route::match(['GET', 'POST'], '/admin/sitecontent/home', [Pages::class, 'home']);
+Route::match(['GET', 'POST'], '/admin/sitecontent/about', [Pages::class, 'about']);
+Route::match(['GET', 'POST'], '/admin/sitecontent/contact', [Pages::class, 'contact']);
+Route::match(['GET', 'POST'], '/admin/sitecontent/services', [Pages::class, 'services']);
 
-Route::match(['GET', 'POST'], '/admin/pages/portfolios', [Pages::class, 'portfolios']);
+Route::match(['GET', 'POST'], '/admin/sitecontent/portfolios', [Pages::class, 'portfolios']);
 
 
 

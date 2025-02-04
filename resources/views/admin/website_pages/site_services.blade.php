@@ -100,10 +100,10 @@ id="saveForm">
         </div>
     </div>
 
-          
-
+</div>  
+<div class="card">
     <div class="card-header">
-        <h5>Brands</h5>
+        <h5>Banner</h5>
     </div>
 
             <div class="card-body">
@@ -113,74 +113,76 @@ id="saveForm">
                         <div class="row">
                             <div class="col-6">
                                 <div class="mb-3">
-                                    <label class="form-label" for="brand">Brands</label>
+                                    <label class="form-label" for="brand">Heading (Brand)</label>
                                     <input class="form-control" id="brand" type="text"
                                         name="brand" placeholder=""
                                         value="{{ !empty($sitecontent['brand']) ? $sitecontent['brand'] : "" }}">
                                 </div>
                             </div>
                         </div></div></div> </div>
-
-                        <div class="card-header">
-                            <h5>Section 1 testimonials</h5>
-                        </div>
-        
-            <div class="card-body">
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="row">
-                            <div class="col-6">
-                                <div class="mb-3">
-                                    <label class="form-label" for="sec1_head">Top heading</label>
-                                    <input class="form-control" id="sec1_head" type="text"
-                                        name="sec1_head" placeholder=""
-                                        value="{{ !empty($sitecontent['sec1_head']) ? $sitecontent['sec1_head'] : "" }}">
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="mb-3">
-                                    <label class="form-label" for="sec1_dec">Heading</label>
-                                    <input class="form-control" id="sec1_dec" type="text"
-                                        name="sec1_dec" placeholder=""
-                                        value="{{ !empty($sitecontent['sec1_dec']) ? $sitecontent['sec1_dec'] : "" }}">
-                                </div>
-                            </div>
-                           
-                        </div>
-                    </div>
-        
-        
-                    <div class="col">
-                        <div class="card w-100 border position-relative overflow-hidden">
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <div class="file_choose_icon">
-                                        <img src="{{ get_site_image_src('images', !empty($sitecontent['image1']) ? $sitecontent['image1'] : "") }}" alt="matdash-img" class="img-fluid ">
-                                    </div>
-                                    <p class="mb-0">Allowed JPG, GIF or PNG. Max size of 800K</p>
-                                    <input class="form-control uploadFile" name="image1" type="file"
-                                        data-bs-original-title="" title="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-         
-
-            {{-- yahn agy --}}
-       
-            <div class="col-12">
-                <div class="d-flex align-items-center justify-content-end mt-4 gap-6">
-                <button class="btn btn-primary" type="submit">Update Page</button>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
 
+
+<div class="card">
+
+    <div class="card-header">
+        <h5>Section 1(Testimonial)</h5>
+    </div>
+
+    <div class="card-body">
+
+        <div class="row">
+            <div class="col">
+                <div class="card w-100 border position-relative overflow-hidden">
+                    <div class="card-body p-4">
+                      <div class="text-center">
+                       <div class="file_choose_icon">
+                        <img src="{{ get_site_image_src('images', !empty($sitecontent['image1']) ? $sitecontent['image1'] : '') }}" alt="matdash-img" class="img-fluid " >
+                       </div>
+                        <p class="mb-0">Allowed JPG, GIF or PNG. Max size of 800K</p>
+                        <input class="form-control uploadFile" name="image1" type="file"
+                            data-bs-original-title="" title="">
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col-md-8">
+                <div class="row">
+                <div class="col-12">
+                        <div class="mb-3">
+                            <label class="form-label" for="sec1_head">Top Heading</label>
+                            <input class="form-control" id="sec1_head" type="text"
+                                name="sec1_head" placeholder=""
+                                value="{{ !empty($sitecontent['sec1_head']) ? $sitecontent['sec1_head'] : "" }}">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="mb-3">
+                            <label class="form-label" for="sec1_dec">Heading</label>
+                            <input class="form-control" id="sec1_dec" type="text"
+                                name="sec1_dec" placeholder=""
+                                value="{{ !empty($sitecontent['sec1_dec']) ? $sitecontent['sec1_dec'] : "" }}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
    
 
-
+<div class="col-12">
+    <div class="d-flex align-items-center justify-content-end mt-4 gap-6">
+    <button class="btn btn-primary" type="submit">Update Page</button>
+    </div>
+</div>
+</div>
+</div>
+</div>
 
  
 

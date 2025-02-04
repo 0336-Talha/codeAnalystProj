@@ -27,71 +27,50 @@
                                 <div class="col-xs-6">
                                     <div class="form_blk">
                                         <input type="text" name="name" id="name" class="txtBox"
-                                            placeholder="First Name" required>
+                                            placeholder="First Name" >
                                     </div>
                                 </div>
                                 <div class="col-xs-6">
                                     <div class="form_blk">
                                         <input type="text" name="lname" id="lname" class="txtBox"
-                                            placeholder="Last Name" required>
+                                            placeholder="Last Name" >
                                     </div>
                                 </div>
                                 <div class="col-xs-6">
                                     <div class="form_blk">
-                                        <input type="email" name="email" id="email" class="txtBox"
-                                            placeholder="Email" required>
+                                        <input type="text" name="email" id="email" class="txtBox"
+                                            placeholder="Email" >
                                     </div>
                                 </div>
                                 <div class="col-xs-6">
                                     <div class="form_blk">
                                         <input type="tel" name="phone" id="phone" class="txtBox"
-                                            placeholder="Phone No" required>
+                                            placeholder="Phone No" >
                                     </div>
                                 </div>
                                 <div class="col-xs-12">
                                     <div class="form_blk">
-                                        <input type="text" name="webemail" id="webemail" class="txtBox" required
+                                        <input type="text" name="webemail" id="webemail" class="txtBox" 
                                             placeholder="Your Website">
                                     </div>
                                 </div>
                                 <div class="col-xs-12">
                                     <div class="form_blk">
-                                        <textarea class="txtBox" required name="msg" id="msg"
+                                        <textarea class="txtBox"  name="msg" id="msg"
                                             placeholder="Coments...."></textarea>
                                     </div>
                                 </div>
                             </div>
                             <div class="bTn">
-                                <button type="submit" id="submitBtn" class="webBtn"> <i class="spinner hidden"></i> Submit
+                                <button type="submit" id="submitBtn" class="webBtn"> 
+                                    <i class="spinner hidden"></i> Submit
                                 </button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
-            <!-- <div class="infoLst flex text-center">
-                <div class="col">
-                    <div class="inner">
-                        <div class="icon"><img src="images/map.png" alt=""></div>
-                        <h5>Visit the office</h5>
-                        <span>1711 O lorem ispum,<br> 93645 Suhyt 102</span>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="inner">
-                        <div class="icon"><img src="images/phone-call.png" alt=""></div>
-                        <h5>Phone Number</h5>
-                        <a href="tel:(317) 9129-870">(090) 7006-1721</a>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="inner">
-                        <div class="icon"><img src="images/orange-mail.png" alt=""></div>
-                        <h5>Email Address</h5>
-                        <a href="mailto:info@vision.com">info@code-analyst.com</a>
-                    </div>
-                </div>
-            </div> -->
+    
         </div>
     </section>
 

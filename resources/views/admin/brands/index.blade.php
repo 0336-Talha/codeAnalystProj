@@ -127,14 +127,9 @@
 <div class="card"> 
     <div class="card-body">
         <div class="row"> 
-            @if (count($rows) > 0)
-            <div class="btn_blk text-right mb-4 d-flex justify-content-end">
-                <a href="javascript:document.getElementById('updateFormOrder').submit();" class="btn btn-danger"><i class="fa fa-refresh" aria-hidden="true"></i> Update Order</a>
-            </div>
-            @endif
+          
             <div class="table-responsive">
-                {{-- <form name="updateFormOrder" id="updateFormOrder" action="{{url('admin/services/orderAll/')}}" method="post">
-                    @csrf --}}
+     
                     <table id="zero_config" class="table table-striped table-bordered text-nowrap align-middle">
                         <thead>
                             <!-- start row -->
@@ -161,10 +156,7 @@
 
                                 </td>
                                 <td>{!! $row->name !!}</td>
-                                {{-- <td>{{!empty($row->linkdin) ? $row->linkdin : ""}}</td> --}}
-                             {{-- <td>{!! $row->discription !!}</td>  --}}
-                             {{-- <td>{{}}</td> --}}
-                              {{-- <td><input type="number" name="orderid{{$row->id}}" value="{{$row->order_no}}" class="form-control" size="10" /><input type="hidden" name="type{{$row->id}}" value="{{$row->type}}" /></td> --}}
+
                                 <td>
                                     <div class="dropdown dropstart">
                                         <a href="javascript:void(0)" class="text-muted" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
