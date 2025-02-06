@@ -14,7 +14,7 @@ class TeamController extends Controller
     public function index()
     {
    
-        $this->data['rows'] = Team::get();
+        $this->data['rows'] = Team::latest()->get();
         // return $this->data;
         return view('admin.teams.index', $this->data);
     }

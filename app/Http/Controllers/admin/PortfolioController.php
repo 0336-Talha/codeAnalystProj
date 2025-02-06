@@ -11,7 +11,7 @@ class PortfolioController extends Controller
     //
     public function index(){
         // return "hi";
-        $this->data['rows'] = Portfolio::get();
+        $this->data['rows'] = Portfolio::latest()->get();
         // return $this->data;
         // return "hello";
         return view('admin.portfolios.index', $this->data);

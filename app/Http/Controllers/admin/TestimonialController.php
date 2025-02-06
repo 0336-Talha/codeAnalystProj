@@ -13,7 +13,7 @@ class TestimonialController extends Controller
     public function index()
     {
    
-        $this->data['rows'] = Testimonial::orderBy('order_no', 'ASC')->get();
+        $this->data['rows'] = Testimonial::latest()->get();
         // return $this->data;
         return view('admin.testimonials.index', $this->data);
     }

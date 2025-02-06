@@ -12,7 +12,7 @@ class LanguagesController extends Controller
     public function index()
     {
    
-        $this->data['rows'] = Language::get();
+        $this->data['rows'] = Language::latest()->get();
         // return $this->data;
         // return "hello";
         return view('admin.langs.index', $this->data);

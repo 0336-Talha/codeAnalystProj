@@ -55,19 +55,8 @@
             <span class="hide-menu">Website Pages</span>
           </a>
         </li>
-
-
-
-
-
-
-
-
- 
-
-
         <li class="sidebar-item">
-          <a class="sidebar-link has-arrow {{ $admin_page == 'testimonials' || $admin_page == 'services' ||  $admin_page == 'portfolios' || $admin_page == 'teams' || $admin_page=="langs"  || $admin_page == 'blog_categories' ? 'active' : '' }}" href="javascript:void(0)" aria-expanded="false">
+          <a class="sidebar-link has-arrow {{ $admin_page == 'testimonials' || $admin_page == 'services' ||  $admin_page == 'portfolios' || $admin_page == 'teams' || $admin_page=="langs"  || $admin_page=='brands' || $admin_page == 'blog_categories' ? 'active' : '' }}" href="javascript:void(0)" aria-expanded="false">
             <iconify-icon icon="solar:widget-4-line-duotone"></iconify-icon>
             <span class="hide-menu">Cruds</span>
           </a>

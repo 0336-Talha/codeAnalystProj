@@ -12,7 +12,7 @@ class BrandController extends Controller
     public function index()
     {
    
-        $this->data['rows'] = Brand::get();
+        $this->data['rows'] = Brand::latest()->get();
         // return $this->data;
         // return "hello";
         return view('admin.brands.index', $this->data);
